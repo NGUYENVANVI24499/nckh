@@ -1,0 +1,8 @@
+lấy tên giảng viên của lịch công tác
+
+SELECT giangvien.name_gv
+FROM lich_congtac 
+JOIN thanhphan ON lich_congtac.id_lichcongtac = thanhphan.id_thanhphan
+JOIN giangvien on thanhphan.id_gvien = giangvien.id_gvien
+WHERE thanhphan.id_thanhphan =2
+GROUP BY giangvien.id_gvien
